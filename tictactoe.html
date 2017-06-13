@@ -5,13 +5,34 @@
 		<style>
 		.Square { 
 			width:40px;
+			height: 40px;
+			text-align: center;
+			font-size: 18pt;
+			font-weight: bold;
+			font-family: Comic Sans MS;
+			color: purple;
 		}
 		
 		</style>
+		
+		<script>
+	
+		function startGame() {
+			document.turn = "X";
+			
+			setMessage(document.turn + " gets to start.");
+		}
+		
+		function setMessage(message) {
+			document.getElementById("message").innerText = message;
+		}
+	
+		</script>
 		</head>
-	<body>
-		<h1>This is a pug and cat tic-tac-toe game
-		<table border="10">
+	<body onload="startGame()">
+		<h1>This is a pug and cat tic-tac-toe game</h1>
+		<h2 id="message">x is going</h2>
+		<table border="20">
 			<tr>
 				<td class="Square">X</td>
 				<td class="Square">X</td>
